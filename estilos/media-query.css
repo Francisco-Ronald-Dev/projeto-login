@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/* Aula 3 / Vídio 42 do Cap 26 do Modulo 4 */
+
+/* Typical Device BreakPoints
+Pequenas telas : até 600px
+Celulares : 600px até 768px
+Tablets : 768px até 992px
+Desktop : 992px até 1200px
+Grandes Telas : acima de 1200px*/
+
+/*Antes de começarmos, este detalhe que direi serve para tudo além de programação : 
+Tudo depende de como aquilo está sendo entendido ou interpretado, tem textos que serão interpretados como textos, nestes casos para centralizar deve ser usado uma centralização para textos, tem imagens que serão interpretadas como imagens, neste caso deve ser usada uma centralização para imagens. Mas não para por aqui, as vezes haveram Textos que serão interpretados como Imagens, neste caso você pode avaliar melhor a situação ou usar uma centralização para Imagens, O inverso também ocorre, podem ter Imagens que são interpretadas como Textos, e nesse caso você pode avaliar e analisar melhor esta situação ou usar uma centralização para Textos. Tudo vai depender de como está sendo interpretado.*/
+
+/*
+|media-query |    |media-feature     |    |media feature     | */
+@media screen and (min-width : 768px) and (max-width : 992px){ /* Aqui estamos criando a versão do nosso site para Tabletes.*/
+    body{
+        background-image: linear-gradient(to top, #49a09d, #5f2c82);
+    }
+    section#login {
+        width: 80vw;
+    }
+    section#login > div#imagem {
+        float: left;
+        width: 30%;
+        height: 70%;
+    }
+    section#login > div#formulario {
+        float: right;
+        width: 70%;
+    }
+}
+
+@media screen and (min-width : 992px){ /*Aqui estamos criando a Responsividade para telas Maiores ainda.*/
+    body{
+        background-image: linear-gradient(to top, #49a09d, #5f2c82);
+    }
+    section#login {
+        width: 950px;
+    }
+
+    section#login > div#imagem {
+        float: left;
+        width: 50%;
+        height: 100%;
+    }
+
+    section#login > div#formulario {
+        float: right;
+        width: 50%;
+    }
+}
