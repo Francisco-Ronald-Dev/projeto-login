@@ -6,6 +6,8 @@
     <title>Projeto Login</title>
     <!-- Aula 1 / vídio 40 do cap 26 do Modulo 4-->
     <!-- Tela de Login responsiva só com Html e Css-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media-query.css">
 </head>
@@ -18,7 +20,35 @@
             <div id="formulario">
                 <h1>Login</h1>
                 <p>Seja bem vindo(a) novamente. Faça login para poder acessar sua conta e fazer as configurações no seu ambiente.</p>
-                <form action="login.php" method="post"> <!-- Já que nos vamos trabalhar com senha e login o nosso formúlario será (form: post).-->
+                <form action="login.php" method="post" autocomplete="on"> <!-- Já que nos vamos trabalhar com senha e login o nosso formúlario será (form: post).-->
+
+                    <!-- Aula 4 / Vídio 43 do Cap 26 do Modulo 4-->
+                    <!-- Criando o formulário de login - @Curso em Vídeo HTML5 e CSS3 -->
+
+                    <!-- Os nossos Botões (input) eles irão estar dentro de duas (div) vejá-->
+                    <div class="campo">
+
+                        <span class="material-symbols-outlined">
+                            account_circle
+                        </span>
+                        <input type="email" name="Login" id="iLogin" placeholder="Seu e-mail" autocomplete="email" required maxlength="30">
+                        <label for="iLogin">Login</label> <!--Só lembrando que o Parâmetro (for) da Tag (label) tem que ter o mesmo valor/ser igual ao Parâmetro (id) da Tag (Input).-->
+                    </div>
+                    <div class="senha">
+
+                        <span class="material-symbols-outlined">
+                            key
+                        </span>
+                        <input type="password" name="Senha" id="iSenha" placeholder="Sua senha" autocomplete="current-password" required minlength="8" maxlength="20">
+                        <label for="iSenha">Senha</label>
+                    </div>
+                    <input type="submit" value="Entrar">
+                    <a href="esqueci.html">
+                        Esqueci a senha 
+                        <span class="material-symbols-outlined">
+                            attach_email
+                        </span>
+                    </a>
 
                 </form>
             </div>
